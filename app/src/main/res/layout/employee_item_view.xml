@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/emp_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12323233"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:id="@+id/emp_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/emp_id"
+        app:layout_constraintTop_toBottomOf="@id/emp_id"
+        android:layout_marginBottom="16dp"
+        tools:text="Poonguzhali SK"/>
+    <TextView
+        android:id="@+id/emp_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/emp_name"
+        app:layout_constraintTop_toBottomOf="@id/emp_name"
+        android:layout_marginBottom="16dp"
+        tools:text="Full Time"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_employee"
+        android:text="@string/delete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/emp_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
