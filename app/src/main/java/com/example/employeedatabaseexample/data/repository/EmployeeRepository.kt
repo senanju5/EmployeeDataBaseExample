@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.map
 class EmployeeRepository (private val offlineDataSource: OfflineDataSource = OfflineDataSource()) {
    
     suspend fun insertEmployee (context: Context, employee: EmployeeUIModel) {
-      val employee : EmployeeDBModel=  EmployeeDBModel(employee.empId, employee.empFirstName, employee.empLastName, employee.empDOB, employee.empType)
+      val employee : EmployeeDBModel=  EmployeeDBModel(null, employee.empFirstName, employee.empLastName, employee.empDOB, employee.empType)
       offlineDataSource.insertEmployee(context, employee)
     }
 

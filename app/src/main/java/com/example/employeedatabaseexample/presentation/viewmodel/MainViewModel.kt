@@ -17,6 +17,7 @@ class MainViewModel(private val employeeDomain:EmployeeDomain = EmployeeDomain()
     viewModelScope.launch(Dispatchers.IO) {
         employeeDomain.insertEmployee(context, employee)
     }
+
    }
 
    fun deleteEmployee(context:Context, employee:EmployeeUIModel) {
@@ -33,7 +34,7 @@ class MainViewModel(private val employeeDomain:EmployeeDomain = EmployeeDomain()
    }
 
    fun getAllEmployee (context: Context) {
-    viewModelScope.launch(Dispatchers.IO) {
+    viewModelScope.launch {
         employeeDomain.getAllEmployee(context).collect{
             employees.value = it
         }
